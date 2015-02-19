@@ -11,8 +11,8 @@
         <div>
             <form role="form">
                 <input class="inputa" type="text" placeholder="Nazwa" ng-model="category.name"/>
-                <buton type="submit" class="btn" ng-click="addCategory(category)">Dodaj</buton>
-                <buton type="submit" class="btn" ng-click="showEditCategory = !showEditCategory">Edytuj kategorie</buton>
+                <button type="submit" class="btn" ng-click="addCategory(category)">Dodaj</button>
+                <button type="submit" class="btn" ng-click="showEditCategory = !showEditCategory">Edytuj kategorie</button>
             </form>
         </div>
         <div ng-show="showEditCategory" style="background-color: #006600; margin-top: 10px; padding: 5px; padding-left: 15px; color:white ">
@@ -37,12 +37,12 @@
     </div>
     <div class ='content'>
         <div>
-            <input class="inputb" type="text" placeholder="Gospodarze"/>
-            <input class="inputb" type="text" placeholder="Goście"/>
-            <select class="selecta"></select></select>
-            <input class="inscore" type="text"/>
-            <input class="inscore" type="text"/ style="margin-right:10px">
-            <buton typ="submit" class="btn">Dodaj</buton>
+            <input class="inputb" type="text" placeholder="Gospodarze" ng-model="bookmark.hometeam"/>
+            <input class="inputb" type="text" placeholder="Goście" ng-model="bookmark.guest"/>
+            <select class="selecta" ng-model="bookmark.categoryname" ng-options="category.name as category.name for category in categories"></select>
+            <input class="inscore" type="number" ng-model="bookmark.hscore"/>
+            <input class="inscore" type="number" ng-model="bookmark.gscore" style="margin-right:10px">
+            <button type="submit" class="btn" ng-click="addBookmark(bookmark)">Dodaj</button>
         </div>
     </div>
 </div>
