@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: #FFFFFF;
-    font-family: sans-serif;
+    font-family: sans-serif,arial,helvetica;
 }
 
 header {
@@ -13,6 +13,100 @@ header {
     padding-right: 15%;
     padding-top: 10px;
     color: white;
+}
+
+.homemain {
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+.homeheader {
+    background-color: #006600;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-left: 7%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: "Helvetica";
+    font-size: 50px;
+}
+
+.bar {
+    background-color: #006600;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-color: #006600;
+    border-width: 1px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.btn {
+    font-size: 16px;
+    padding: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 10px;
+    background-color: #339900;
+    color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.btn:hover {
+    background-color: #99cc66;
+    color: black;
+}
+
+.inputa {
+    width: 300px;
+    font-size: 16px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.inputb {
+    width: 20%;
+    font-size: 16px;
+    padding: 5px;
+    margin: 10px;
+    margin-right: 0;
+}
+
+.selecta {
+    width: 20%;
+    font-size: 16px;
+    padding: 5px;
+    margin: 10px;
+    margin-right: 0;
+}
+
+.inscore {
+    width: 5%;
+    font-size: 16px;
+    padding: 5px;
+    margin: 10px;
+    margin-right: 0;
+}
+
+.editing {
+        
 }
 
 a {
