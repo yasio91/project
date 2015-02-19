@@ -7,13 +7,28 @@
         DODAJ KATEGORIĘ
     </div>
     <div class ='content'>
+        
         <div>
-            <input class="inputa" type="text" placeholder="Nazwa"/>
-            <buton typ="submit" class="btn">Dodaj</buton>
-            <buton typ="submit" class="btn">Edytuj kategorie</buton>
+            <form role="form">
+                <input class="inputa" type="text" placeholder="Nazwa" ng-model="category.name"/>
+                <buton type="submit" class="btn" ng-click="addCategory(category)">Dodaj</buton>
+                <buton type="submit" class="btn" ng-click="showEditCategory = !showEditCategory">Edytuj kategorie</buton>
+            </form>
         </div>
-        <div style="background-color: #006600; margin-top: 10px; padding: 5px; padding-left: 15px; color:white ">
+        <div ng-show="showEditCategory" style="background-color: #006600; margin-top: 10px; padding: 5px; padding-left: 15px; color:white ">
             Aktualne kategorie    
+        </div>
+        <div ng-show="showEditCategory" style="margin-top: 10px; padding: 5px; padding-left: 15px">
+            <table>
+                <tbody>
+                    <tr ng-repeat="category in categories">
+                           <td><button class="btn2" ng-model="category.name"/>{{category.name}}</td>
+                           <td>
+                               <button class="btn" ng-click="removeCategory(category)">Usuń</button>
+                           </td>
+                       </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     
