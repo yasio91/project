@@ -1,0 +1,18 @@
+<div class="homemain">
+    <div class="homeheader">
+       <center>
+         <table>
+             <tbody>
+                 <tr ng-repeat="bookmark in currentBookmarks">
+                     <td>
+                         <center>
+                         <a ng-click="setActiveBookmark(bookmark)" ui-sref="bookmark({title: bookmark.title})">
+                         <button class="match" ng-click="showEditBookmark = !showEditBookmark">{{bookmark.hometeam}} - {{bookmark.guest}} {{bookmark.hscore}}:{{bookmark.gscore}}</button></center>  
+                         </a>
+                     </td>
+                 </tr>
+             </tbody>
+         </table>   
+     </center>    
+    </div>
+</div>
