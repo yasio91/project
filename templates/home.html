@@ -1,10 +1,11 @@
 <div class="homemain">
     <div class="homeheader">
-        TWOJA BAZA WYNIKÓW!   
+        TWOJA BAZA WYNIKÓW!
+        <p class="pheader">Strona pozwala na zarządzenia ligowymi kolejkami oraz poszczególnymi meczami.</p>
     </div>
     
     <div class="bar">
-        DODAJ KATEGORIĘ
+        DODAJ KOLEJKĘ
     </div>
     <div class ='content'>
         
@@ -16,7 +17,7 @@
             </form>
         </div>
         <div ng-show="showEditCategory" style="background-color: #006600; margin-top: 10px; padding: 5px; padding-left: 15px; color:white ">
-            Aktualne kategorie    
+            POSZCZEGÓLNE KOLEJKI   
         </div>
         <div ng-show="showEditCategory" style="margin-top: 10px; padding: 5px; padding-left: 15px">
             <table>
@@ -24,7 +25,7 @@
                     <tr ng-repeat="category in categories">
                            <td><button class="btn2" ng-model="category.name"/>{{category.name}}</td>
                            <td>
-                               <button class="btn" ng-click="removeCategory(category)">Usuń</button>
+                               <button class="remove" ng-click="removeCategory(category)">Usuń</button>
                            </td>
                        </tr>
                 </tbody>
@@ -33,7 +34,7 @@
     </div>
     
     <div class="bar">
-        DODAJ ZAKŁADKĘ
+        DODAJ MECZ
     </div>
     <div class ='content'>
         <div>
@@ -43,6 +44,24 @@
             <input class="inscore" type="number" ng-model="bookmark.hscore"/>
             <input class="inscore" type="number" ng-model="bookmark.gscore" style="margin-right:10px">
             <button type="submit" class="btn" ng-click="addBookmark(bookmark)">Dodaj</button>
+            <button type="submit" class="btn" ng-click="showEditBookmark = !showEditBookmark">Usuń</button>
+        </div>
+        <div ng-show="showEditBookmark" style="background-color: #006600; margin-top: 10px; padding: 5px; padding-left: 15px; color:white ">
+            MECZE W BAZIE    
+        </div>
+        <div ng-show="showEditBookmark" style="margin-top: 10px; padding: 5px; padding-left: 15px">
+            <table>
+                <tbody>
+                    <tr ng-repeat="bookmark in bookmarks">
+                        <td>
+                            <button class ="btn3">{{bookmark.hometeam}} - {{bookmark.guest}} {{bookmark.hscore}}:{{bookmark.gscore}} ({{bookmark.categoryname}})</button>
+                        </td>
+                        <td>
+                            <button class="remove" ng-click="removeBookmark(bookmark)">Usuń</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
