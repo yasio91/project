@@ -14,9 +14,6 @@ var bs = angular.module("myApp.factoryBookmarkService", ["firebase"])
         var removeBookmark = function(bookmark){
             bookmarks.$remove(bookmark);
         };
-        var updateBookmark = function(bookmark){
-            bookmarks.$save(bookmark);    
-        };
         var removeAllBookmarkForCategory = function(category){
             var len = bookmarks.length;
             for (var i=0; i<len; i++) {
@@ -30,7 +27,6 @@ var bs = angular.module("myApp.factoryBookmarkService", ["firebase"])
             getBookmarks: getBookmarks,
             addBookmark: addBookmark,
             removeBookmark: removeBookmark,
-            updateBookmark: updateBookmark,
             removeAllBookmarkForCategory: removeAllBookmarkForCategory
         }
     });
